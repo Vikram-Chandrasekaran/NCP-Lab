@@ -1,0 +1,26 @@
+<html>
+	<script>
+		function nfib(i){
+			if(i==0)
+				return 0
+			if(i==1)
+				return 1;
+			return nfib(i-1)+nfib(i-2);
+		}
+		function fib_series(n){
+			var arr=[0,1]
+			for (i = 2; i < n; ++i) { 
+			  arr[i]=(arr[i-1]+arr[i-2]);
+			}
+			for(i=0;i<n;++i)
+			{
+				console.log(arr[i]);
+			}
+		}
+
+		var x = window.prompt("Enter the limit");
+		var n=parseInt(x);
+		console.log("Nth Fibonacci number is"+nfib(n))
+		fib_series(n)
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <script>
+        function click1(){
+            var a=document.getElementById('chess1')
+            a.href='Q3_Frame2.html'
+        }
+        function out(){
+            document.getElementById('name').innerHTML =''
+
+        }
+        function over(){
+            document.getElementById('name').innerHTML ='This is a chess board'
+            
+        }
+    </script>
+    
+<body>
+    <a id="chess1" target="txt_frame" onclick="click1()">
+        <img style="width: 200px;height: 200px;" id="chess2" src="chess.jpg" onmouseout="out()" onmouseover="over()"/>
+    </a>
+    <p id='name'></p>
+</body>
+</html>

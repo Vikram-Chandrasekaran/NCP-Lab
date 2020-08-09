@@ -1,0 +1,17 @@
+<html>
+	<a id="chess1" target="txt_frame" onclick="click1()">
+		<img style="width: 200px;height: 200px;" id="chess2" src="chess.jpg" onmouseout="out()" onmouseover="over()"/>
+	</a>
+<script>
+    function click1(){
+		var a=document.getElementById('chess1')
+		a.href='text.html'
+    }
+    function out(){
+    	document.body.style.backgroundColor ='white';
+    }
+    function over(){
+    	document.body.style.backgroundColor ='blue';
+    }
+</script>
+</html>
