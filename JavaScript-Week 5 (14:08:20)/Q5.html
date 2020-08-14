@@ -1,0 +1,24 @@
+<html>
+	<body>
+		<h3 id="O/P"></h3>
+	</body>
+	<script>
+		str=""
+		for(var i=1;i<=100;i++)
+		{
+			if(i%3 == 0)
+				str+="Fizz \n"
+			else if(i%5 == 0)
+				str+="Buzz \n"
+			else
+			{
+				if(i%15 == 0)
+					str+="FizzBuzz \n"
+				else
+					str+=(i+"\n")
+			}
+		}
+		document.getElementById("O/P").innerHTML=str
+		
+	</script>
+</html>

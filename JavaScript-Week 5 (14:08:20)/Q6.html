@@ -1,0 +1,28 @@
+<html>
+	<body>
+		<h3 id="Array"></h3>
+	</body>
+	<script>
+		function assignGrade(x)
+		{
+			if(x>=90)
+				return "A"
+			if(x>=80)
+				return "B"
+			if(x>=70)
+				return "C"
+			if(x>=60)
+				return "D"
+			if(x>=50)
+				return "E"
+			return "F"
+		}
+		str=""
+		for(var i=60;i<100;i++)
+		{
+			str+=("For "+i+", you got a "+assignGrade(i)+". ")
+		}
+		document.getElementById("Array").innerHTML=str
+		
+	</script>
+</html>

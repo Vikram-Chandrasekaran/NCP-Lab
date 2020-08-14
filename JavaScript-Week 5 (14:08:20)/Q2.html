@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<h3 id="Reverse_Sort"></h3>
+	</body>
+	<script>
+		var x = window.prompt("Enter the limit");
+		var n=parseInt(x);
+		var arr=[];
+		for(var i=0;i<n;++i)
+		{
+			arr.push(window.prompt("Enter string "+i));
+		}
+		arr.sort().reverse()
+		document.getElementById("Reverse_Sort").innerHTML="The words in reverse lexicographical order are    "+arr
+	</script>
+</html>

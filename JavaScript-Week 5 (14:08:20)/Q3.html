@@ -1,0 +1,58 @@
+<html>
+	<body>
+		<h3 id="Pattern"></h3>
+	</body>
+	<script>
+			document.open();
+
+			var x = window.prompt("Enter the limit");
+			var n=parseInt(x);
+			var arr=[];
+			var max_num=-1
+			for(var i=0;i<n;++i)
+			{
+				arr[i]=(parseInt(window.prompt("Enter number "+(i+1))));
+				max_num=Math.max(arr[i],max_num)
+			}
+			document.write("Input is :"+arr+"<br>")
+			var mat=new Array(max_num)
+			for(var i=0;i<max_num;i++)
+				mat[i]=[]
+			for(var i=0;i<max_num;i++)
+				for(var j=0;j<max_num;j++)
+					mat[i][j]=0
+			for(var i=0;i<n;i++)
+			{
+				var t=arr[i]
+				var x=0
+				while(t--)
+					mat[x++][i]=1
+			}
+			var str=""
+			for(var i=0;i<max_num;i++)
+			{
+				for(var j=0;j<max_num;j++)
+				{
+
+					if(mat[i][j]==1)
+						document.write("*")
+					else
+						document.write(" ")
+				}
+				document.write("<br>")
+			}
+			document.write("<br>")
+			for(var i=0;i<max_num;i++)
+			{
+				for(var j=0;j<max_num;j++)
+				{
+
+					document.write(mat[i][j])
+				}
+				document.writeln("<br>")
+			}
+			//document.getElementById("Pattern").innerHTML=mat
+			document.close();
+
+	</script>
+</html>
