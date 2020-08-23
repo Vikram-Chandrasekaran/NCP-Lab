@@ -1,0 +1,61 @@
+<html>
+	<body>
+		<h3 id="DOB"></h3>
+	</body>
+	<script>
+		var str = window.prompt("Enter your DOB");
+		document.write("Input is :"+str+"<br>")
+		words=str.split("-")
+		if(words.length != 3)
+			document.getElementById("DOB").innerHTML="Invalid Input"
+		else if(words[0].length!=2 || words[1].length!=2 || words[2].length!=4)
+			document.getElementById("DOB").innerHTML="Invalid Input"
+		else
+		{
+			str=words[1]
+			flag=true
+			if(str=='01' || str=='03' || str=='05' || str=='07' || str=='08' || str=='10' || str=='12')
+			{
+				if(str>'31')
+					flag=false
+
+			}
+			else if(str=='04' || str=='06' || str=='09' || str=='11')
+			{
+				if(str>'30')
+					flag=false
+			}
+			else if(str=='02')
+			{
+				var n=parseInt(words[2])
+				if(n%400== 0)
+				{
+					if(str>'29')
+						flag=false
+				}
+				else if(n%100 == 0)
+				{
+					if(str>'28')
+						flag=false
+				}
+				else if(n%4 ===0)
+				{
+					if(str>'29')
+						flag=false
+				}
+				else
+				{
+					if(str>'28')
+						flag=false
+				}
+			}
+			else
+				flag=false
+		}
+		if(flag)
+			document.getElementById("DOB").innerHTML="Valid Input"
+		else
+			document.getElementById("DOB").innerHTML="Invalid Input"
+		
+	</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+		<table id="book_index">
+		</table>
+	</body>
+	<script>
+		var n=parseInt(window.prompt("Enter the number of chapters"));
+		var arr=[]
+		var pages=[]
+		var max_len=-1;
+		var max_page=-1;
+		for(var i=1;i<=n;++i)
+		{
+			var str=window.prompt("Enter chapter "+i);
+			var k=window.prompt("Enter the page number for chapter "+i);
+			arr.push(" "+i+" . "+str);
+			max_len=Math.max(max_len,arr[i-1].length);
+			max_page=Math.max(max_page,k.length);
+			pages.push(k);	
+		}
+		for(var i=0;i<n;++i)
+		{
+			if(arr[i].length<max_len)
+			{
+				while(arr[i].length<max_len)
+					arr[i]+=" * ";
+			}
+			console.log(arr[i].length)
+		}
+		for(var i=0;i<n;++i)
+		{
+			for(var j=0;j<20;++j)
+				arr[i]+=" * ";
+		}
+		for(var i=0;i<n;++i)
+		{
+			if(pages[i].length<max_page)
+			{
+				while(pages[i].length<max_page)
+					pages[i]=" "+pages[i];
+			}
+		}
+		var table = document.getElementById("book_index");
+		for(var i=0;i<n;++i)
+		{
+			var r=table.insertRow(i);
+			var temp=arr[i]+pages[i];
+			r.insertCell(0).innerHTML="<h2>"+temp+"</h2>";
+		}
+	</script>
+</html>

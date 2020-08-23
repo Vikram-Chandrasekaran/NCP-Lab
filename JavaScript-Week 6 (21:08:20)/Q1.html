@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<body> 
+		<table id="mul_table"  border="1" cellpadding="2">
+		</table>
+		
+	</body>
+	<script>
+		var rows=parseInt(window.prompt("Enter the number of rows"));
+		var cols=parseInt(window.prompt("Enter the number of columns"));
+		var table = document.getElementById("mul_table");
+		for(var i=1;i<=rows;++i)
+		{
+			var r=table.insertRow(i-1);
+			for(var j=1;j<=cols;++j)
+				r.insertCell(j-1).innerHTML=(i*j);
+		}
+
+	</script>
+</html>
