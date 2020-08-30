@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+	 <style rel="stylesheet" type="text/css" media="screen">
+	legend {
+	    font-size:  1.1em;
+	    font-weight:  bold;
+	    position:  relative;
+	    top:  -.0em;
+	}
+
+	</style>
+	<script>
+		function ValidateEmail(mail) 
+		{
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+			{
+				return (true)
+			}
+			alert("You have entered an invalid email address!")
+			return (false)
+		}
+		function check()
+		{
+			console.log("Successfully called")
+			var sfn=document.getElementbyId('sfn')
+			var smn=document.getElementbyId('smn')
+			var sln=document.getElementbyId('sln')
+			var dob=document.getElementbyId('dob')
+			var s_eid=document.getElementbyId('s_eid')
+			var s_gender=document.getElementbyName('gender')
+			var s_natl=document.getElementbyId('s_natl')
+			var s_rel=document.getElementbyId('s_rel')
+
+			var s_im=document.getElementbyId('s_im')
+			var s_pa_hn=document.getElementbyId('s_pa_hn')
+			var s_pa_sn=document.getElementbyId('s_pa_sn')
+			var s_pa_loc=document.getElementbyId('s_pa_loc')
+			var s_pa_city=document.getElementbyId('s_pa_city')
+			var s_pa_state=document.getElementbyName('s_pa_state')
+			var s_pa_country=document.getElementbyId('s_pa_country')
+			var s_pa_zip=document.getElementbyId('s_pa_zip')
+			var s_rel=document.getElementbyId('s_rel')
+
+			var s_school_name=document.getElementbyId('s_school_name')
+			var s_r_number=document.getElementbyId('s_r_number')
+			var s_10th=document.getElementbyId('s_10th')
+			var s_12th=document.getElementbyId('s_12th')
+			var s_qem=document.getElementbyId('s_qem')
+
+			var mfn=document.getElementbyId('m_fn')
+			var mmn=document.getElementbyId('m_mn')
+			var mln=document.getElementbyId('m_ln')
+			var m_email_id=document.getElementbyId('m_email_id')
+			var m_occupation=document.getElementbyId('m_occupation')
+			var m_eq=document.getElementbyId('m_eq')
+			var m_rel=document.getElementbyId('m_rel')
+
+			var ffn=document.getElementbyId('f_fn')
+			var fmn=document.getElementbyId('f_mn')
+			var fln=document.getElementbyId('f_ln')
+			var f_email_id=document.getElementbyId('f_email_id')
+			var f_occupation=document.getElementbyId('f_occupation')
+			var f_eq=document.getElementbyId('f_eq')
+			var f_rel=document.getElementbyId('f_rel')
+
+			if(ValidateEmail(s_eid) && ValidateEmail(m_email_id) && ValidateEmail(f_email_id))
+			{
+				console.log("Successfully Submitted")
+				document.getElementById("myForm").reset();
+
+			}
+			else
+			{
+				console.log("Unsucessful")
+			}
+		}
+		
+
+	</script>
+	<body>
+
+	<form id="myForm" name='Personal Data'>
+		<fieldset>
+			<legend>Personal Data</legend>
+			<label for="ln">First Name</label>
+			<input required type="text" id="sfn" />
+			<br/><br/>
+			<label for="fn">Middle Name</label>
+			<input required style="margin-right: 100px" type="text" id="smn" />	
+			<label for="mn">Last Name</label>
+			<input required type="text" id="sln" />
+			<br/><br/>
+			<label for="ln">Date of Birth</label>
+			<input required type="date" id="dob" name="birthday">
+			<br/><br/>
+			<label for="em">Email ID</label>
+			<input required type="text" id="s_eid" />
+			<p>Please select your gender:</p>
+			<input required type="radio" id="male" name="gender" value="male">
+			<label for="male">Male</label><br>
+			<input required type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label><br>
+			<input required type="radio" id="other" name="gender" value="other">
+			<label for="other">Other</label>
+			<br/><br/>
+			<label for="em">Nationality</label>
+				<select id="s_natl" name="country">
+					<option value="India">India</option>
+					<option value="United States of America">United States of America</option>
+					<option value="Canada">Canada</option>
+					<option value="United Arab Erimates">United Arab Emirates</option>
+					<option value="Japan">Japan</option>
+					<option value="Netherlands">Netherlands (Holland, Europe)</option>
+					<option value="France">France</option>
+			</select>
+			<br/><br/>
+			<label for="em">Religion</label>
+					<select id="s_rel" name="religion">
+						<option value="Hindu">Hindu</option>
+						<option value="Muslim">Muslim</option>
+						<option value="Christian">Christian</option>
+						<option value="Buddhist">Buddhist</option>
+				</select>
+				<br/><br/>
+			<label for="ln">Identification Marks</label>
+			<input required type="text" id="s_im" />
+			<br/><br/>
+			<fieldset>
+				<legend>Permanent Address</legend>
+				<label for="ln">House Number and Name</label>
+				<input required type="text" id="s_pa_hn" />
+				<br/><br/>
+				<label for="fn">Street Number and name</label>
+				<input required style="margin-right: 100px" type="text" id="s_pa_sn" />	
+				<label for="mn">Locality</label>
+				<input required type="text" id="s_pa_loc" />
+				<br/><br/>
+				<label for="em">City</label>
+				<input required type="text" id="s_pa_city" />
+				<br/><br/>
+				<label for="em">State</label>
+				<input required type="text" id="s_pa_state" />
+				<br/><br/>
+				<label for="em">Country</label>
+				<select id="s_pa_country" name="country">
+					<option value="India">India</option>
+					<option value="United States of America">United States of America</option>
+					<option value="Canada">Canada</option>
+					<option value="United Arab Erimates">United Arab Emirates</option>
+					<option value="Japan">Japan</option>
+					<option value="Netherlands">Netherlands (Holland, Europe)</option>
+					<option value="France">France</option>
+				</select>
+				<br/><br/>
+				<label for="em">Zip Code</label>
+				<input required type="text" id="s_pa_zip" />
+			</fieldset>
+			<fieldset>
+				<legend>Education Details</legend>
+				<label for="ln">School Name</label>
+				<input required type="text" id="s_school_name" />
+				<br/><br/>
+				<label for="fn">Register Number</label>
+				<input required style="margin-right: 100px" type="text" id="s_r_number" />	
+				<label for="mn">10th Marks </label>
+				<input required type="number" id="s_10th" />
+				<br/><br/>
+				<label for="em">12th Marks</label>
+				<input required type="number" id="s_12th" />
+				<br/><br/>
+				<label for="em">Qualifying Exam Marks</label>
+				<input required type="number" id="s_qem" />
+			</fieldset>
+		</fieldset>
+		<fieldset>
+			<legend>Parent's details</legend>
+			<fieldset>
+				<legend>Mother</legend>
+				<label for="ln">First Name</label>
+				<input required type="text" id="m_fn" />
+				<br/><br/>
+				<label for="fn">Middle Name</label>
+				<input required style="margin-right: 100px" type="text" id="m_mn" />	
+				<label for="mn">Last Name</label>
+				<input required type="text" id="m_ln" />
+				<br/><br/>
+				<label for="em">Email ID</label>
+				<input required type="text" id="m_email_id" />
+				<br/><br/>
+				<label for="mn">Educational Qualification</label>
+				<input required type="text" id="m_eq" />
+				<br/><br/>
+				<label for="em">Occupation</label>
+				<select id="m_occupation" name="occupation">
+					<option value="Teacher">Teacher</option>
+					<option value="Engineer">Engineer</option>
+					<option value="Analyst">Analyst</option>
+					<option value="Doctor">Doctor</option>
+					<option value="In_House">In House</option>
+				</select>
+				<br/><br/>
+				<label for="em">Religion</label>
+					<select id="m_rel" name="religion">
+						<option value="Hindu">Hindu</option>
+						<option value="Muslim">Muslim</option>
+						<option value="Christian">Christian</option>
+						<option value="Buddhist">Buddhist</option>
+				</select>
+				<br/><br/>
+			</fieldset>
+			<fieldset>
+				<legend>Father</legend>
+				<label for="ln">First Name</label>
+				<input required type="text" id="f_fn" />
+				<br/><br/>
+				<label for="fn">Middle Name</label>
+				<input required style="margin-right: 100px" type="text" id="f_mn" />	
+				<label for="mn">Last Name</label>
+				<input required type="text" id="f_ln" />
+				<br/><br/>
+				<label for="em">Email ID</label>
+				<input required type="text" id="f_email_id" />
+				<br/><br/>
+				<label for="mn">Educational Qualification</label>
+				<input required type="text" id="f_eq" />
+				<br/><br/>
+				<label for="em">Occupation</label>
+				<select id="f_occupation" name="occupation">
+					<option value="Teacher">Teacher</option>
+					<option value="Engineer">Engineer</option>
+					<option value="Analyst">Analyst</option>
+					<option value="Doctor">Doctor</option>
+					<option value="In_House">In House</option>
+				</select>
+				<br/><br/>
+				<label for="em">Religion</label>
+					<select id="f_rel" name="religion">
+						<option value="Hindu">Hindu</option>
+						<option value="Muslim">Muslim</option>
+						<option value="Christian">Christian</option>
+						<option value="Buddhist">Buddhist</option>
+				</select>
+				<br/><br/>
+			</fieldset>
+		</fieldset>
+		<button  onclick="check()" type="submit" value="Submit">Submit</button>
+	</form>
+</body>
+</html>
